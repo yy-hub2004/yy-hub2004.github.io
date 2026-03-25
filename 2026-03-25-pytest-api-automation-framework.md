@@ -39,11 +39,9 @@ tags: [Python, Pytest, 接口自动化, 测试开发, 实战]
 
 我采用了经典的分层架构设计，把整个框架分成了5层，每层职责单一，完全解耦：
 
-### 1. 工具层封装
+## 1.工具层封装
 
 首先封装通用的HTTP请求工具类，统一处理所有接口的请求、鉴权、日志、异常处理，避免每个用例都写重复的请求代码：
-
-```python
 # common/http_client.py
 import requests
 import logging
@@ -91,9 +89,8 @@ class HttpClient:
 
     def post(self, url, **kwargs):
         return self.request("POST", url, **kwargs)
-2. 接口层封装
+## 2.接口层封装
 将不同模块的API接口进行封装，使测试用例与具体的接口实现解耦：
-# api/pay_api.py
 from common.http_client import HttpClient
 
 class PayApi(HttpClient):
@@ -107,14 +104,8 @@ class PayApi(HttpClient):
     # 订单查询接口
     def query_order(self, order_id):
         return self.get(f"/v1/pay/query/{order_id}")
-3. 数据驱动设计
+## 3.数据驱动设计
 使用YAML文件管理测试数据，实现数据驱动，将测试数据与测试代码分离，极大提高了可维护性：
-yaml
-
-编辑
-
-
-
 # testdata/pay_order_testdata.yaml
 # 正常支付场景
 normal_case:
@@ -152,14 +143,9 @@ abnormal_case:
       status_code: 200
       code: 40002
       message: "支付金额必须大于0"
-4. 测试用例编写
+## 4.测试用例编写
+
 使用Pytest编写测试用例，并结合Allure生成精美的测试报告：
-python
-
-编辑
-
-
-
 # testcases/test_pay_order.py
 import pytest
 import allure
