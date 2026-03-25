@@ -6,12 +6,12 @@
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 
-title: Edit _config.yml to set your title!
-description: This is where the description of your site will go. You should change it by editing the _config.yml file. It can be as long as you like! Happy blogging... ❤
-github_username: jph00
+title: 杨翌 | 测试开发实习生
+description: 浙江中医药大学 | 数据科学与大数据技术 | 专注自动化测试、接口测试、Python实战
+github_username: yy-hub2004
 
 # Email and twitter are optional:
-email:
+email: 3055486732@qq.com
 twitter_username:
 
 # Set this to true to get LaTeX math equation support
