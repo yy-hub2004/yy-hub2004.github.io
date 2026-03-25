@@ -34,12 +34,13 @@ tags: [Python, Pytest, 接口自动化, 测试开发, 实战]
 
 ---
 
-# 三、框架分层架构（五层设计）
-我采用**行业标准分层架构**，每层职责清晰，易维护、易扩展、易阅读。
+## 三、框架分层架构（五层设计）
+采用**行业标准分层架构**，每层职责清晰，易维护、易扩展、易阅读。
 
 ---
 
-# 1️⃣ 工具层封装（通用请求+日志+签名）
+### 1️⃣ 工具层封装（通用请求+日志+签名）
+```python
 # common/http_client.py
 import requests
 import logging
@@ -78,10 +79,12 @@ class HttpClient:
 
     def post(self, url, **kwargs):
         return self.request("POST", url, **kwargs)
-        
+```
+
 ---
 
-# 2️⃣ 接口层封装（业务 API 单独管理）
+### 2️⃣ 接口层封装（业务 API 单独管理）
+```python
 # api/pay_api.py
 from common.http_client import HttpClient
 
@@ -96,10 +99,12 @@ class PayApi(HttpClient):
     # 订单查询接口
     def query_order(self, order_id):
         return self.get(f"/v1/pay/query/{order_id}")
+```
 
 ---
 
-# 3️⃣ 测试数据层（YAML 数据驱动）
+### 3️⃣ 测试数据层（YAML 数据驱动）
+```python
 # testdata/pay_order_testdata.yaml
 normal_case:
   - name: "正常支付-借记卡"
@@ -122,10 +127,12 @@ abnormal_case:
     expected:
       code: 40001
       message: "卡号格式错误"
+```
 
 ---
 
-# 4️⃣ 测试用例层（Pytest + Allure）
+### 4️⃣ 测试用例层（Pytest + Allure）
+```python
 # testcases/test_pay_order.py
 import pytest
 import allure
@@ -162,13 +169,14 @@ class TestPayOrder:
         resp = pay_api.pay_order(case["order_data"])
         res = resp.json()
         assert res["code"] == case["expected"]["code"]
+```
 
 ---
 
-## 三、落地成果
+## 四、落地成果
 这套框架上线后，取得了非常好的效果：效率大幅提升：核心支付接口实现 100% 场景覆盖，单次版本回归时间从原来的 4 个小时，压缩到了 15 分钟，测试效率提升 60% 以上。质量显著提高：通过接口 + 数据库的双层断言，在多次版本迭代中成功拦截了 3 起潜在的支付逻辑错误，有效规避了资金安全风险，上线版本零重大线上故障。维护成本降低：数据驱动的设计，让新增测试用例的时间从原来的 30 分钟 / 条，缩短到了 5 分钟 / 条，团队新人也能快速上手。可扩展性强：框架支持对接 Jenkins，实现代码提交后自动触发测试、自动生成测试报告，完美适配 CI/CD 流程。
 
 ---
 
-## 四、经验总结
+## 五、经验总结
 签名封装至关重要：支付接口的鉴权签名一定要封装好，不要在每个用例里写，不然签名逻辑改了，所有用例都要改，维护成本极高。数据库断言是核心：一定要加数据库断言，不要只依赖接口返回。接口返回成功不代表真的成功，只有数据库里的订单状态、资金流水正确，才是真的支付成功。避免硬编码等待：不要用固定的 sleep 等待，一定要用接口轮询或者事件等待机制，不然用例执行时间会很长，而且很容易因为网络波动导致用例失败。测试数据隔离：测试数据一定要做隔离，每次执行用例前要清理测试数据，避免上一次的用例执行结果影响下一次的用例。
