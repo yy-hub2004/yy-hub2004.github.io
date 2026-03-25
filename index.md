@@ -1,7 +1,32 @@
-Hello and welcome to this blog. Edit the `index.md` file to change this content. All pages on the blog, including this one, use [Markdown](https://guides.github.com/features/mastering-markdown/). You can include images:
+---
+# 这一段是Jekyll的页面配置，小白不用改
+layout: home
+title: 首页
+permalink: /
+---
 
-![Image of fast.ai logo](images/logo.png)
+# 杨翌 | 测试开发实习生
+> 浙江中医药大学数据科学与大数据技术本科 | 软件设计师中级 | 英语六级 | 专注自动化测试与测试工程化
 
-## This is a title
+---
 
-And you can include links, like this [link to fast.ai](https://www.fast.ai). Posts will appear after this file. 
+## 我的核心优势
+✅ **专业资质**：持有计算机技术与软件专业技术资格（软件设计师）中级证书，英语六级（514分），具备扎实的计算机理论基础  
+✅ **实战经验**：2个月支付行业测试工程师实习经历，独立负责核心支付接口、后台管理系统全流程测试，累计提交有效缺陷50+  
+✅ **自动化能力**：熟练掌握Python+Pytest+Requests/Playwright技术栈，独立搭建接口/UI自动化测试框架，将回归测试效率提升60%+  
+✅ **技术栈全面**：精通功能测试、接口测试、Web自动化测试，熟悉Linux、MySQL、Docker、Git、Jenkins等测试工程化工具
+
+---
+
+## 快速导航
+👉 [查看我的完整简历（关于我）](/about.html)  
+👉 [查看我的核心项目实战](/projects.html)  
+👉 [查看我的技术博客与学习总结](/blog.html)
+
+---
+
+## 联系方式
+- GitHub：[@yy-hub2004](https://github.com/yy-hub2004)
+- 邮箱：3055486732@qq.com
+- 期望城市：杭州
+- 求职方向：测试开发、自动化测试、软件测试工程师
