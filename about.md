@@ -1,7 +1,7 @@
 ---
-# 页面配置，小白不用改
+# 页面配置
 layout: page
-title: 关于我 | 完整简历
+title: 关于我/完整简历
 permalink: /about.html
 ---
 
