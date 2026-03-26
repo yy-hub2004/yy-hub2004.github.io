@@ -7,42 +7,51 @@ title: 杨翌 | 测试开发实习生
 # 网站描述：SEO优化+网站副标题，精准命中测试开发岗位关键词
 description: 浙江中医药大学数据科学与大数据技术本科，软件设计师中级，专注自动化测试、接口测试、测试工程化，具备支付系统自动化测试实战经验
 # 你的名字，全站通用
-author:
-  name: 杨翌
-  email: 3055486732@qq.com
-  github: yy-hub2004
+author: 杨翌
+# 你的GitHub用户名，和你的仓库一致，不要改
+github_username: yy-hub2004
 
-# -------------------------- 主题配置（关键！修复构建失败） --------------------------
-# 使用 minimal-mistakes 主题，这是修复构建失败的核心
+# -------------------------- 联系方式（可选修改） --------------------------
+# 邮箱：会显示在网站底部/导航栏，面试官可以联系到你
+email: 3055486732@qq.com
+# 其他社交账号，没有就留空，不会显示
+twitter_username: 
+linkedin_username: 
+
+# -------------------------- 功能开关 --------------------------
+# 数学公式支持，测试相关的内容用不到，保持关闭
+use_math: 
+# 谷歌统计，不用管，留空
+google_analytics:
+
+# -------------------------- 主题和插件（小白不用改，模板自带） --------------------------
+# 用模板自带的minima主题，稳定、简洁、面试官看着舒服，不用花里胡哨
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "default" # 可选皮肤: "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
-# -------------------------- 导航栏配置（控制网站顶部菜单） --------------------------
-header_pages:
-  - index.md
-  - about.md
-  - projects.md
-
-# -------------------------- 插件配置（只保留必要的） --------------------------
 plugins:
   - jekyll-feed
   - jekyll-gist
   - jekyll-octicons
   - jekyll-github-metadata
-  - jekyll-paginate
 
-# -------------------------- 其他配置（保持默认即可） --------------------------
-paginate: 5
-paginate_path: "/page:num/"
+# -------------------------- 导航栏配置（核心！控制网站顶部菜单） --------------------------
+# 这里配置网站顶部的导航菜单，面试官可以快速跳转到对应的页面
+header_pages:
+  - index.md # 首页
+  - about.md # 关于我（完整简历）
+  - projects.md # 项目展示
+  - # 后续加博客会自动显示，不用改这里
 
-markdown: kramdown
+# -------------------------- Markdown渲染配置（小白不用改） --------------------------
+titles_from_headings:
+  enabled:     true
+  strip_title: true
+  collections: true
+
 highlighter: rouge
+markdown: kramdown
 kramdown:
+  math_engine: katex
   input: GFM
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
-
-# 禁用不必要的功能
-use_math: false
-google_analytics:
