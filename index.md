@@ -1,6 +1,6 @@
 ---
 # 这一段是yy的页面配置
-layout: home
+layout: page
 title: 首页
 permalink: /
 ---
@@ -31,5 +31,4 @@ permalink: /
 - 期望城市：杭州
 - 求职方向：测试开发、自动化测试、AI测试工程师
 
-## Posts
-- [个人技术博客 | 测试开发学习笔记]({{ site.baseurl }}/2026/03/25/测试开发学习笔记.html)
+
