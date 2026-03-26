@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 核心项目
+title: 项目1
 permalink: /projects.html
 ---
 
