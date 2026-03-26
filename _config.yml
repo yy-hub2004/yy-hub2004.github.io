@@ -26,7 +26,7 @@ google_analytics:
 
 # -------------------------- 主题和插件（小白不用改，模板自带） --------------------------
 # 用模板自带的minima主题，稳定、简洁、面试官看着舒服，不用花里胡哨
-theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 plugins:
   - jekyll-feed
   - jekyll-gist
