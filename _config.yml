@@ -26,6 +26,7 @@ header_pages:
   - index.md
   - about.md
   - projects.md
+  - 2026-03-25-pytest-api-automation-framework.md
 
 # -------------------------- Markdown 渲染 --------------------------
 markdown: kramdown
