@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 实战项目
+title: 项目2
 date: 2026-03-25
 categories: 测试开发
 tags: [Python, Pytest, 接口自动化, 测试开发, 实战]
