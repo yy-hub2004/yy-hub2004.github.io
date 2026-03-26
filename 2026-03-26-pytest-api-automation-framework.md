@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: post
 title: 项目3
-permalink: /projects.html
+date: 2026-03-26
+categories: 测试开发
+tags: [Python, Pytest, 接口自动化, 测试开发, 实战]
 ---
 
 # 我的核心项目实战
@@ -9,7 +11,7 @@ permalink: /projects.html
 
 ---
 
-## 项目二：Wooshpay 后台系统 UI 自动化测试套件
+## 项目三：Wooshpay 后台系统 UI 自动化测试套件
 **项目周期**：2026.01 - 2026.03  
 **技术栈**：Python + Pytest + Playwright + PageObject + Allure  
 **项目角色**：独立负责人
