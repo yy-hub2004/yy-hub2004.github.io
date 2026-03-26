@@ -60,3 +60,36 @@
 
 .codecell table { width: auto; }
 
+// 全局配色
+body {
+  background-color: #f8f9fa; /* 浅灰背景，比纯白更柔和 */
+  color: #333; /* 正文深灰，不刺眼 */
+}
+
+// 标题颜色
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50; /* 深蓝灰标题，专业感拉满 */
+}
+
+// 链接颜色（鼠标 hover 会变色）
+a {
+  color: #3498db; /* 蓝色链接，清晰不突兀 */
+}
+a:hover {
+  color: #2980b9; /* 鼠标 hover 时变深一点 */
+}
+
+// 代码块背景色（让代码更突出）
+pre, code {
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+// 页面容器居中，更美观
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
