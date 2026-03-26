@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: 项目2
 date: 2026-03-25
 categories: 测试开发
