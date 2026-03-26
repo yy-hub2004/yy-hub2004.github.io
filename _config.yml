@@ -25,6 +25,7 @@ plugins:
 header_pages:
   - index.md
   - about.md
+  - blog.md
   - projects.md
   - 2026-03-25-pytest-api-automation-framework.md
   - 2026-03-26-pytest-api-automation-framework.md
