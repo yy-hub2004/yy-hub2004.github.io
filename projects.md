@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 项目实战
+title: 核心项目
 permalink: /projects.html
 ---
 
